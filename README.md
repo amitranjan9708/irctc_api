@@ -82,7 +82,7 @@ This is a simple Train Ticket Booking System built with Node.js, Express, MySQL,
 
 
 5. Start the application:
- ```bash
+  ```bash
   npm start
  The server will now run on http://localhost:5000 (default).
 
