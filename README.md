@@ -44,22 +44,24 @@ This is a simple Train Ticket Booking System built with Node.js, Express, MySQL,
 3. env
 ```bash
 JWT_SECRET=your_jwt_secret_key_here
-Create the MySQL database (irctc3) and tables using the provided SQL schema or run the following:
 
-sql
-Copy code
-CREATE DATABASE irctc3;
+4. Create the MySQL database (irctc3) and tables using the provided SQL schema or run the following:
 
-USE irctc3;
+   sql
+  ```bash
+  Copy code
+  CREATE DATABASE irctc3;
 
-CREATE TABLE users (
+  USE irctc3;
+
+  CREATE TABLE users (
   id INT AUTO_INCREMENT PRIMARY KEY,
   name VARCHAR(100) NOT NULL,
   email VARCHAR(100) UNIQUE NOT NULL,
   password VARCHAR(255) NOT NULL
 );
 
-CREATE TABLE trains (
+  CREATE TABLE trains (
   id INT AUTO_INCREMENT PRIMARY KEY,
   name VARCHAR(100) NOT NULL,
   source VARCHAR(100) NOT NULL,
@@ -68,7 +70,7 @@ CREATE TABLE trains (
   available_seats INT NOT NULL
 );
 
-CREATE TABLE bookings (
+  CREATE TABLE bookings (
   id INT AUTO_INCREMENT PRIMARY KEY,
   user_id INT NOT NULL,
   train_id INT NOT NULL,
@@ -76,42 +78,48 @@ CREATE TABLE bookings (
   FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE,
   FOREIGN KEY (train_id) REFERENCES trains(id) ON DELETE CASCADE
 );
-Start the application:
+5. Start the application:
 
-bash
-Copy code
-npm start
-The server will now run on http://localhost:5000 (default).
+  ```bash
 
-API Endpoints
-POST /register
-Description: Registers a new user.
-Request body:
-json
-Copy code
+    npm start
+    The server will now run on http://localhost:5000 (default).
+
+6. API Endpoints
+    POST /register
+    Description: Registers a new user.
+    Request body:
+    
+   ```json
 {
   "name": "John Doe",
   "email": "john@example.com",
   "password": "securepassword"
 }
-Response:
-json
+  Response:
+```json
 Copy code
 {
   "message": "User registered successfully."
 }
+
+
+
 POST /login
 Description: Logs in a user and returns a JWT token.
 Request body:
-json
-Copy code
+```json
+
 {
   "email": "john@example.com",
   "password": "securepassword"
 }
+
+
+
 Response:
-json
-Copy code
+```json
+
 {
   "token": "jwt_token_here",
   "user": {
@@ -120,28 +128,37 @@ Copy code
     "email": "john@example.com"
   }
 }
+
+
+
 POST /book
 Description: Books a seat on a train.
 Request body:
-json
-Copy code
+```json
+
 {
   "trainId": 1
 }
+
+
+
 Response:
-json
-Copy code
+```json
+
 {
   "message": "Seat booked successfully."
 }
+
+
+
 GET /trains
 Description: Fetches trains based on the source and destination.
 Query parameters:
 source (string)
 destination (string)
 Response:
-json
-Copy code
+```json
+
 [
   {
     "id": 1,
@@ -152,6 +169,8 @@ Copy code
     "available_seats": 50
   }
 ]
+
+
 Handling Race Conditions
 In this system, when multiple users try to book a seat at the same time, the application ensures that only one user can book the seat. It uses MySQL's FOR UPDATE locking mechanism within a transaction to lock the train record while a user is booking a seat. This prevents race conditions and ensures that the available seats are updated atomically.
 
@@ -161,6 +180,9 @@ Create a new branch for your feature: git checkout -b feature/your-feature.
 Commit your changes: git commit -m 'Add new feature'.
 Push to the branch: git push origin feature/your-feature.
 Open a pull request.
+
+
+
 License
 This project is open-source and available under the MIT License.
 
