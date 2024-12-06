@@ -35,15 +35,14 @@ This is a simple Train Ticket Booking System built with Node.js, Express, MySQL,
    cd irctc-booking-system
 
 
-   Install dependencies:
+2. Install dependencies:
 
-bash
-Copy code
-npm install
-Create a .env file in the root of the project and add the following variables:
+  ```bash
+   npm install
+   Create a .env file in the root of the project and add the following variables:
 
-env
-Copy code
+3. env
+```bash
 JWT_SECRET=your_jwt_secret_key_here
 Create the MySQL database (irctc3) and tables using the provided SQL schema or run the following:
 
