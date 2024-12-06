@@ -155,12 +155,11 @@ Description: Fetches trains based on the source and destination.
 Query parameters:
 source (string)
 destination (string)
-Response:
+ Response:
      ```bash
+        [
 
- [
-  {
-    "id": 1,
+        {    "id": 1,
     "name": "Express 101",
     "source": "New York",
     "destination": "Los Angeles",
@@ -185,9 +184,8 @@ Open a pull request.
 License
 This project is open-source and available under the MIT License.
 
-yaml
-Copy code
+
 
 ---
 
-Make sure to replace any placeholders like `your-username` in the repository URL, `your_jwt_secr   
+ 
