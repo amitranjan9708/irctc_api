@@ -158,9 +158,9 @@ Query parameters:
 source (string)
 destination (string)
 Response:
- ```bash
+     ```bash
 
-[
+ [
   {
     "id": 1,
     "name": "Express 101",
@@ -172,7 +172,7 @@ Response:
 ]
 
 
-Handling Race Conditions
+## Handling Race Conditions
 In this system, when multiple users try to book a seat at the same time, the application ensures that only one user can book the seat. It uses MySQL's FOR UPDATE locking mechanism within a transaction to lock the train record while a user is booking a seat. This prevents race conditions and ensures that the available seats are updated atomically.
 
 Contributing
