@@ -109,33 +109,33 @@ This is a simple Train Ticket Booking System built with Node.js, Express, MySQL,
 POST /login
 Description: Logs in a user and returns a JWT token.
 Request body:
-  ```bash
+    ```bash
 
-{
+  {
   "email": "john@example.com",
   "password": "securepassword"
-}
+  }
 
 
 
-Response:
-  ```bash
+    Response:
+     ```bash
 
-{
+  {
   "token": "jwt_token_here",
   "user": {
     "id": 1,
     "name": "John Doe",
     "email": "john@example.com"
-  }
-}
+    }
+   }
 
 
 
-POST /book
-Description: Books a seat on a train.
-Request body:
-  ```bash
+  POST /book
+  Description: Books a seat on a train.
+  Request body:
+     ```bash
 
 {
   "trainId": 1
@@ -144,7 +144,7 @@ Request body:
 
 
 Response:
-  ```bash
+     ```bash
 
 {
   "message": "Seat booked successfully."
@@ -158,7 +158,7 @@ Query parameters:
 source (string)
 destination (string)
 Response:
-  ```bash
+ ```bash
 
 [
   {
