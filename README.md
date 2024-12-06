@@ -84,25 +84,25 @@ This is a simple Train Ticket Booking System built with Node.js, Express, MySQL,
 5. Start the application:
    ```bash
    npm start
-  The server will now run on http://localhost:5000 (default).
+  The server will now run on http://localhost:3000 (default).
 
 6. API Endpoints
     POST /register
     Description: Registers a new user.
     Request body:
     
-  ```bash
-  {
-  "name": "John Doe",
-  "email": "john@example.com",
-  "password": "securepassword"
-  }
-  Response:
-  ```bash
+    ```bash
+   {
+    "name": "John Doe",
+   "email": "john@example.com",
+   "password": "securepassword"
+    }
+    Response:
+      ```bash
 
-{
-  "message": "User registered successfully."
-}
+   {
+    "message": "User registered successfully."
+    }
 
 
 
