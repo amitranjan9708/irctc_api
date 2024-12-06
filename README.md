@@ -117,16 +117,15 @@ This is a simple Train Ticket Booking System built with Node.js, Express, MySQL,
 
 
 
-    Response:
-     ```bash
-
-  {
-  "token": "jwt_token_here",
-  "user": {
-    "id": 1,
-    "name": "John Doe",
-    "email": "john@example.com"
-    }
+  Response:
+       ```bash
+         {
+        "token": "jwt_token_here",
+        "user": {
+      "id": 1,
+      "name": "John Doe",
+      "email": "john@example.com"
+      }
    }
 
 
