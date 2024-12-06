@@ -48,11 +48,11 @@ This is a simple Train Ticket Booking System built with Node.js, Express, MySQL,
 4. Create the MySQL database (irctc3) and tables using the provided SQL schema or run the following:
 
    sql
-  ```bash
-  Copy code
-  CREATE DATABASE irctc3;
+   ```bash
+   Copy code
+   CREATE DATABASE irctc3;
 
-  USE irctc3;
+   USE irctc3;
 
     CREATE TABLE users (
     id INT AUTO_INCREMENT PRIMARY KEY,
@@ -83,8 +83,8 @@ This is a simple Train Ticket Booking System built with Node.js, Express, MySQL,
 
 5. Start the application:
  ```bash
-npm start
-The server will now run on http://localhost:5000 (default).
+  npm start
+ The server will now run on http://localhost:5000 (default).
 
 6. API Endpoints
     POST /register
