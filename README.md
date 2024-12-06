@@ -37,7 +37,7 @@ This is a simple Train Ticket Booking System built with Node.js, Express, MySQL,
 
 2. Install dependencies:
 
-  ```bash
+    ```bash
    npm install
    Create a .env file in the root of the project and add the following variables:
 
