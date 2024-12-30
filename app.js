@@ -5,12 +5,14 @@ const { authenticateToken, checkAdminApiKey } = require('./middleware/auth');
 const userRoutes = require('./routes/userRoutes');
 const adminRoutes = require('./routes/adminRoutes');
 const bookingRoutes = require('./routes/bookingRoutes');
-
+const dotenv = require('dotenv')
 const bookingdetailsRoutes = require('./routes/bookingDetailsRoutes');
 const trainRoutes = require('./routes/trainRoutes');
 // const mysql = require('mysql2')
 const app = express();
-const PORT = 3000;
+
+dotenv.config();
+const PORT = process.env.port||3000;
 
 
 
