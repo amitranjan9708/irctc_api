@@ -25,6 +25,6 @@ app.use('/api', authenticateToken, bookingdetailsRoutes);
 app.use('/api', trainRoutes);
 
 // Start server
-app.listen(3306, () => {
+app.listen(port, () => {
   console.log(`Server running on http://localhost:${port}`);
 });
