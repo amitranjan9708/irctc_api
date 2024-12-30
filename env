@@ -1,1 +1,6 @@
 JWT_SECRET = your_jwt_secret
+DB_HOST=b2euns8lye9n2kcctpsy-mysql.services.clever-cloud.com
+DB_USER=ushpd6epywlvfjbh
+DB_PASSWORD=jTKeioAmo517hwkMI5DR
+DB_NAME=b2euns8lye9n2kcctpsy
+
