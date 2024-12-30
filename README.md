@@ -25,7 +25,9 @@ This is a simple Train Ticket Booking System built with Node.js, Express, MySQL,
 
 - **Node.js** and **npm** should be installed. If not, you can download and install them from [Node.js official website](https://nodejs.org/).
 - **MySQL** should be installed and running.
-###https://irctc-api-dbma.onrender.com/api/login
+
+- **deployed link**
+### https://irctc-api-dbma.onrender.com/
 ### Steps to Run the App
 
 1. Clone this repository:
