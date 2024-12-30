@@ -1,14 +1,15 @@
 const mysql = require('mysql2');
-
+const dotenv = require('dotenv');
+dotenv.config();
 // Create a connection pool
-const pool = mysql.createPool({
-  host: 'localhost',
-  user: 'root',
-  password: '9708195932@Aa',
-  database: 'irctc3',
+const promisePool = mysql.createPool({
+  host: process.env.DB_HOST,
+  user: process.env.DB_USER,
+  password: process.env.DB_PASSWORD,
+  database: process.env.DB_NAME,
   waitForConnections: true,
-  connectionLimit: 10, // Set the max number of simultaneous connections
-  queueLimit: 0 // No limit on the number of waiting connections
+  connectionLimit: 10,
+  queueLimit: 0
 });
 
 // Create a promise pool (used for async/await handling)
